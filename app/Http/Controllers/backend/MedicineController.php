@@ -5,7 +5,7 @@ namespace App\Http\Controllers\backend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-use App\Medicine;
+use App\model\backend\Medicine;
 use Carbon\Carbon;
 
 class MedicineController extends Controller

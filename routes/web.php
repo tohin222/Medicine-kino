@@ -28,7 +28,7 @@ Route::group(['prefix'=>'map'],function(){
     Route::get('/show', 'backend\MapController@map')->name('map');
 });
 
-
+//medicine route
 Route::group(['prefix'=>'medicine'],function(){
     Route::get('/add', 'backend\MedicineController@medicine_add')->name('medicine_add');
     Route::get('/show', 'backend\MedicineController@medicine_show')->name('medicine_show');
@@ -36,6 +36,17 @@ Route::group(['prefix'=>'medicine'],function(){
     Route::get('/delete/{medicine_id}', 'backend\MedicineController@medicine_delete');
     Route::get('/edit/{medicine_id}', 'backend\MedicineController@medicine_edit');
     Route::post('/update', 'backend\MedicineController@medicine_update')->name('medicine_update');
+});
+
+
+//company route
+Route::group(['prefix'=>'company'],function(){
+    Route::get('/add', 'backend\ComapnyController@company_add')->name('company_add');
+    Route::get('/show', 'backend\ComapnyController@company_show')->name('company_show');
+    Route::post('/create', 'backend\ComapnyController@company_create')->name('company_create');
+    Route::get('/delete/{medicine_id}', 'backend\ComapnyController@company_delete');
+    Route::get('/edit/{medicine_id}', 'backend\ComapnyController@company_edit');
+    Route::post('/update', 'backend\ComapnyController@company_update')->name('company_update');
 });
 
 

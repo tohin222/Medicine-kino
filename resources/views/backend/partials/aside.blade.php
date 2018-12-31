@@ -28,6 +28,20 @@
         <li><a class="slide-item" href="{{route('medicine_show')}}"><span>Medicine Show</span></a></li>
       </ul>
     </li>
+    <li class="slide">
+      <a class="side-menu__item"  data-toggle="slide" href="#"><i class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Company</span><i class="angle fa fa-angle-right"></i></a>
+      <ul class="slide-menu">
+        <li><a class="slide-item"  href="{{route('company_add')}}"><span>Company Add</span></a></li>
+        <li><a class="slide-item" href="{{route('company_show')}}"><span>Company Show</span></a></li>
+      </ul>
+    </li>
+    <li class="slide">
+      <a class="side-menu__item"  data-toggle="slide" href="#"><i class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Disease</span><i class="angle fa fa-angle-right"></i></a>
+      <ul class="slide-menu">
+        <li><a class="slide-item"  href="#"><span>Disease Add</span></a></li>
+        <li><a class="slide-item" href="#"><span>Disease Show</span></a></li>
+      </ul>
+    </li>
 
   </ul>
 </aside>

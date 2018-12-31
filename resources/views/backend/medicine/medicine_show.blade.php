@@ -24,11 +24,11 @@
                 <th class="wd-5p">Serial</th>
                 <th class="wd-15p">Image</th>
                 <th class="wd-10p">Medicine Name</th>
-                <th class="wd-15p">Medicine Quantity</th>
-                <th class="wd-10p">Description</th>
+                <th class="wd-10p">Medicine Quantity</th>
+                <th class="wd-5p">Medicine Price</th>
                 <th class="wd-10p">Company Name</th>
                 <th class="wd-15p">Disease Name</th>
-                <th class="wd-20p">Action</th>
+                <th class="wd-10p">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -46,11 +46,9 @@
 
                       <td>  <span class="name">{{$medicine->medicine_name}}</span> </td>
                       <td>  <span class="name">{{$medicine->medicine_quantity}}</span> </td>
-                      <td> <span class="name">{{$medicine->medicine_description}}</span> </td>
+                      <td>  <span class="name">{{$medicine->medicine_price}}</span> </td>
                       <td><span class="name">{{$medicine->company_name}}</span></td>
                       <td><span class="name">{{$medicine->disease_name}}</span></td>
-                      {{-- <td><span class="name">{{$medicine->companies->company_name}}</span></td> --}}
-
                       <td>
                         <a href="{{url('admin/medicine/edit')}}/{{$medicine->id}}">edit</a>| <a href="{{url('admin/medicine/delete')}}/{{$medicine->id}}">delete</a>
                       </td>
