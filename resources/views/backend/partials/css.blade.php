@@ -11,6 +11,7 @@
 		<!--Style css-->
 		<link rel="stylesheet" href="{{asset('backend/assets/css/style.css')}}">
 
+	
 		<!--mCustomScrollbar css-->
 		<link rel="stylesheet" href="{{asset('backend/assets/plugins/scroll-bar/jquery.mCustomScrollbar.css')}}">
 

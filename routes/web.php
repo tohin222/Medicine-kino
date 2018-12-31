@@ -32,6 +32,10 @@ Route::group(['prefix'=>'map'],function(){
 Route::group(['prefix'=>'medicine'],function(){
     Route::get('/add', 'backend\MedicineController@medicine_add')->name('medicine_add');
     Route::get('/show', 'backend\MedicineController@medicine_show')->name('medicine_show');
+    Route::post('/create', 'backend\MedicineController@medicine_create')->name('medicine_create');
+    Route::get('/delete/{medicine_id}', 'backend\MedicineController@medicine_delete');
+    Route::get('/edit/{medicine_id}', 'backend\MedicineController@medicine_edit');
+    Route::post('/update', 'backend\MedicineController@medicine_update')->name('medicine_update');
 });
 
 
