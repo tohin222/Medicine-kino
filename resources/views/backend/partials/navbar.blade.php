@@ -1,102 +1,159 @@
-<header id="header" class="header">
-    <div class="top-left">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="./"><img src="{{asset('backend/images/logo.png')}}" alt="Logo"></a>
-            <a class="navbar-brand hidden" href="./"><img src="{{asset('backend/images/logo2.png')}}" alt="Logo"></a>
-            <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
-        </div>
+<nav class="navbar navbar-expand-lg main-navbar">
+  <a class="header-brand" href="index.html">
+    <img src="{{asset('backend/assets/img/brand/logo.png')}}" class="header-brand-img" alt="Kharna-Admin  logo">
+  </a>
+  <form class="form-inline mr-auto">
+    <ul class="navbar-nav mr-3">
+      <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="ion ion-navicon-round"></i></a></li>
+      <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-md-none navsearch"><i class="ion ion-search"></i></a></li>
+    </ul>
+    <div class="search-element">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-primary" type="submit"><i class="ion ion-search"></i></button>
     </div>
-    <div class="top-right">
-        <div class="header-menu">
-            <div class="header-left">
-                <button class="search-trigger"><i class="fa fa-search"></i></button>
-                <div class="form-inline">
-                    <form class="search-form">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
-                        <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
-                    </form>
-                </div>
-
-                <div class="dropdown for-notification">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-bell"></i>
-                        <span class="count bg-danger">3</span>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="notification">
-                        <p class="red">You have 3 Notification</p>
-                        <a class="dropdown-item media" href="#">
-                            <i class="fa fa-check"></i>
-                            <p>Server #1 overloaded.</p>
-                        </a>
-                        <a class="dropdown-item media" href="#">
-                            <i class="fa fa-info"></i>
-                            <p>Server #2 overloaded.</p>
-                        </a>
-                        <a class="dropdown-item media" href="#">
-                            <i class="fa fa-warning"></i>
-                            <p>Server #3 overloaded.</p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="dropdown for-message">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="message" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-envelope"></i>
-                        <span class="count bg-primary">4</span>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="message">
-                        <p class="red">You have 4 Mails</p>
-                        <a class="dropdown-item media" href="#">
-                            <span class="photo media-left"><img alt="avatar" src="{{asset('backend/images/avatar/1.jpg')}}"></span>
-                            <div class="message media-body">
-                                <span class="name float-left">Jonathan Smith</span>
-                                <span class="time float-right">Just now</span>
-                                <p>Hello, this is an example msg</p>
-                            </div>
-                        </a>
-                        <a class="dropdown-item media" href="#">
-                            <span class="photo media-left"><img alt="avatar" src="{{asset('backend/images/avatar/2.jpg')}}"></span>
-                            <div class="message media-body">
-                                <span class="name float-left">Jack Sanders</span>
-                                <span class="time float-right">5 minutes ago</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            </div>
-                        </a>
-                        <a class="dropdown-item media" href="#">
-                            <span class="photo media-left"><img alt="avatar" src="{{asset('backend/images/avatar/3.jpg')}}"></span>
-                            <div class="message media-body">
-                                <span class="name float-left">Cheryl Wheeler</span>
-                                <span class="time float-right">10 minutes ago</span>
-                                <p>Hello, this is an example msg</p>
-                            </div>
-                        </a>
-                        <a class="dropdown-item media" href="#">
-                            <span class="photo media-left"><img alt="avatar" src="{{asset('backend/images/avatar/4.jpg')}}"></span>
-                            <div class="message media-body">
-                                <span class="name float-left">Rachel Santos</span>
-                                <span class="time float-right">15 minutes ago</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="user-area dropdown float-right">
-                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="user-avatar rounded-circle" src="{{asset('backend/images/admin.jpg')}}" alt="User Avatar">
-                </a>
-
-                <div class="user-menu dropdown-menu">
-                    <a class="nav-link" href="#"><i class="fa fa-user"></i>My Profile</a>
-
-                    <a class="nav-link" href="#"><i class="fa fa-bell-o"></i>Notifications <span class="count">13</span></a>
-
-                    <a class="nav-link" href="#"><i class="fa fa-cog"></i>Settings</a>
-
-                    <a class="nav-link" href="#"><i class="fa fa-power-off"></i>Logout</a>
-                </div>
-            </div>
+  </form>
+  <ul class="navbar-nav navbar-right">
+    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="ion-ios-email-outline"></i></a>
+      <div class="dropdown-menu dropdown-list dropdown-menu-right">
+        <div class="dropdown-header">Messages
+          <div class="float-right">
+            <a href="#">View All</a>
+          </div>
         </div>
-    </div>
-</header><!-- /header -->
+        <div class="dropdown-list-content">
+          <a href="#" class="dropdown-item dropdown-item-unread">
+            <img alt="image" src="{{asset('backend/assets/img/avatar/avatar-1.jpg')}}" class="rounded-circle dropdown-item-img">
+            <div class="dropdown-item-desc">
+              <div class="dropdownmsg d-flex">
+                <div class="">
+                  <b>Stewart Ball</b>
+                  <p>Your template awesome</p>
+                </div>
+                <div class="time">6 hours ago</div>
+              </div>
+
+            </div>
+          </a>
+          <a href="#" class="dropdown-item dropdown-item-unread">
+            <img alt="image" src="{{asset('backend/assets/img/avatar/avatar-2.jpg')}}" class="rounded-circle dropdown-item-img">
+            <div class="dropdown-item-desc">
+              <div class="dropdownmsg d-flex">
+                <div class="">
+                  <b>Jonathan North</b>
+                  <p>Your Order Shipped.....</p>
+                </div>
+                <div class="time">45 mins ago</div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="dropdown-item">
+            <img alt="image" src="assets/img/avatar/avatar-4.jpg" class="rounded-circle dropdown-item-img">
+            <div class="dropdown-item-desc">
+              <div class="dropdownmsg d-flex">
+                <div class="">
+                  <b>Victor Taylor</b>
+                  <p>Hi!, I' am web developer</p>
+                </div>
+                <div class="time"> 8 hours ago</div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="dropdown-item">
+            <img alt="image" src="assets/img/avatar/avatar-3.jpg" class="rounded-circle dropdown-item-img">
+            <div class="dropdown-item-desc">
+              <div class="dropdownmsg d-flex">
+                <div class="">
+                  <b>Ruth	Arnold</b>
+                  <p>Hi!, I' am web designer</p>
+                </div>
+                <div class="time"> 3 hours ago</div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="dropdown-item">
+            <img alt="image" src="assets/img/avatar/avatar-5.jpg" class="rounded-circle dropdown-item-img">
+            <div class="dropdown-item-desc">
+              <div class="dropdownmsg d-flex">
+                <div class="">
+                  <b>Sam	Lyman</b>
+                  <p>Hi!, I' am java developer</p>
+                </div>
+                <div class="time"> 15 mintues ago</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link  nav-link-lg beep"><i class="ion-ios-bell-outline"></i></a>
+      <div class="dropdown-menu dropdown-list dropdown-menu-right">
+        <div class="dropdown-header">Notifications
+          <div class="float-right">
+            <a href="#">View All</a>
+          </div>
+        </div>
+        <div class="dropdown-list-content">
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-users text-primary"></i>
+            <div class="dropdown-item-desc">
+              <b>So many Users Visit your template</b>
+            </div>
+          </a>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-exclamation-triangle text-danger"></i>
+            <div class="dropdown-item-desc">
+              <b>Error message occurred....</b>
+            </div>
+          </a>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-users text-warning"></i>
+            <div class="dropdown-item-desc">
+              <b> Adding new people</b>
+            </div>
+          </a>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-shopping-cart text-success"></i>
+            <div class="dropdown-item-desc">
+              <b>Your items Arrived</b>
+            </div>
+          </a>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-comment text-primary"></i>
+            <div class="dropdown-item-desc">
+              <b>New Message received</b> <div class="float-right"><span class="badge badge-pill badge-danger badge-sm">67</span></div>
+            </div>
+          </a>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-users text-primary"></i>
+            <div class="dropdown-item-desc">
+              <b>So many Users Visit your template</b>
+            </div>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="dropdown dropdown-list-toggle">
+      <a href="#" class="nav-link nav-link-lg full-screen-link">
+        <i class="ion-arrow-expand"  id="fullscreen-button"></i>
+      </a>
+    </li>
+    <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
+      <img src="{{asset('backend/assets/img/avatar/avatar-1.jpg')}}" alt="profile-user" class="rounded-circle w-32">
+      <div class="d-sm-none d-lg-inline-block">Jessica Lee</div></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="profile.html" class="dropdown-item has-icon">
+          <i class="ion ion-android-person"></i> Profile
+        </a>
+        <a href="profile.html" class="dropdown-item has-icon">
+          <i class="ion-android-drafts"></i> Messages
+        </a>
+        <a href="profile.html" class="dropdown-item has-icon">
+          <i class="ion ion-gear-a"></i> Settings
+        </a>
+        <a href="#" class="dropdown-item has-icon">
+          <i class="ion-ios-redo"></i> Logout
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>

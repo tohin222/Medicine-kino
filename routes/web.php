@@ -15,7 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/map', 'backend\MapController@map');
 
 Auth::routes();
 
@@ -23,5 +22,18 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group(['prefix'=>'admin'],function(){
-  Route::get('/map', 'backend\MapController@map');
+
+
+Route::group(['prefix'=>'map'],function(){
+    Route::get('/show', 'backend\MapController@map')->name('map');
+});
+
+
+Route::group(['prefix'=>'medicine'],function(){
+    Route::get('/add', 'backend\MedicineController@medicine_add')->name('medicine_add');
+    Route::get('/show', 'backend\MedicineController@medicine_show')->name('medicine_show');
+});
+
+
+
 });

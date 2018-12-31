@@ -1,11 +1,47 @@
-<script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
-<script src="{{asset('backend/assets/js/main.js')}}"></script>
-<!-- Gmaps -->
-<!--<script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2jlT6C_to6X1mMvR9yRWeRvpIgTXgddM"></script>
+<!--Jquery.min js-->
+<script src="{{asset('backend/assets/js/jquery.min.js')}}"></script>
 
-<script src="{{asset('backend/assets/js/lib/gmap/gmaps.js')}}"></script>
-<script src="{{asset('backend/assets/js/init/gmap-init.js')}}"></script>
+<!--popper js-->
+<script src="{{asset('backend/assets/js/popper.js')}}"></script>
+
+<!--Tooltip js-->
+<script src="{{asset('backend/assets/js/tooltip.js')}}"></script>
+
+<!--Bootstrap.min js-->
+<script src="{{asset('backend/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+
+<!--Jquery.nicescroll.min js-->
+<script src="{{asset('backend/assets/plugins/nicescroll/jquery.nicescroll.min.js')}}"></script>
+
+<!--Scroll-up-bar.min js-->
+<script src="{{asset('backend/assets/plugins/scroll-up-bar/dist/scroll-up-bar.min.js')}}"></script>
+
+<!--Sidemenu js-->
+<script src="{{asset('backend/assets/plugins/toggle-menu/sidemenu.js')}}"></script>
+
+<!--mCustomScrollbar js-->
+<script src="{{asset('backend/assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+
+<!--DataTables js-->
+<script src="{{asset('backend/assets/plugins/Datatable/js/jquery.dataTables.js')}}"></script>
+<script src="{{asset('backend/assets/plugins/Datatable/js/dataTables.bootstrap4.js')}}"></script>
+
+<!--Scripts js-->
+<script src="{{asset('backend/assets/js/scripts.js')}}"></script>
+
+<script>
+  $(function(e) {
+    $('#example').DataTable();
+  } );
+</script>
+
+
+{{-- strat form --}}
+		<!--Select2 js-->
+		<script src="{{asset('backend/assets/plugins/select2/select2.full.js')}}"></script>
+	<!--forms js-->
+		<script src="{{asset('backend/assets/js/forms.js')}}"></script>
+
+
+
+    
