@@ -6,13 +6,17 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\model\backend\Medicine;
+use App\model\backend\Company;
+use App\model\backend\Disease;
 use Carbon\Carbon;
 
 class MedicineController extends Controller
 {
   public function medicine_add()
   {
-  return view('backend.medicine.medicine_add');
+    $companies = Company::all();
+        $diseases = Disease::all();
+  return view('backend.medicine.medicine_add',compact('companies','diseases'));
   }
   public function medicine_show()
   {

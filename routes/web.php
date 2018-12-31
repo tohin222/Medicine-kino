@@ -44,11 +44,20 @@ Route::group(['prefix'=>'company'],function(){
     Route::get('/add', 'backend\ComapnyController@company_add')->name('company_add');
     Route::get('/show', 'backend\ComapnyController@company_show')->name('company_show');
     Route::post('/create', 'backend\ComapnyController@company_create')->name('company_create');
-    Route::get('/delete/{medicine_id}', 'backend\ComapnyController@company_delete');
-    Route::get('/edit/{medicine_id}', 'backend\ComapnyController@company_edit');
+    Route::get('/delete/{company_id}', 'backend\ComapnyController@company_delete');
+    Route::get('/edit/{company_id}', 'backend\ComapnyController@company_edit');
     Route::post('/update', 'backend\ComapnyController@company_update')->name('company_update');
 });
 
+//company route
+Route::group(['prefix'=>'disease'],function(){
+    Route::get('/add', 'backend\DiseaseController@disease_add')->name('disease_add');
+    Route::get('/show', 'backend\DiseaseController@disease_show')->name('disease_show');
+    Route::post('/create', 'backend\DiseaseController@disease_create')->name('disease_create');
+    Route::get('/delete/{disease_id}', 'backend\DiseaseController@disease_delete');
+    Route::get('/edit/{disease_id}', 'backend\DiseaseController@disease_edit');
+    Route::post('/update', 'backend\DiseaseController@disease_update')->name('disease_update');
+});
 
 
 });

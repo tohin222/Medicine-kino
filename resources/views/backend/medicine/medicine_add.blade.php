@@ -11,7 +11,7 @@
                       {{ session('success') }}
                   </div>
                 @endif
-                
+
           <h4>General Elements</h4>
         </div>
         <div class="card-body">
@@ -47,13 +47,10 @@
               <label class="col-md-3 col-form-label">Company Name</label>
               <div class="col-md-9">
               <select class="form-control select2 w-100" name="company_id">
-                <option selected="selected">1</option>
-                <option>1</option>
-                <option>1</option>
-                <option>1</option>
-                <option>1</option>
-                <option>1</option>
-                <option>1</option>
+                {{-- <option selected="selected">1</option> --}}
+                @foreach ($companies as $company)
+                        <option value="{{$company->id}}">{{$company->company_name}}</option>
+                @endforeach
               </select>
               </div>
             </div>
@@ -61,13 +58,10 @@
               <label class="col-md-3 col-form-label">Disease Name</label>
               <div class="col-md-9">
               <select class="form-control select2 w-100" name="disease_id">
-                <option selected="selected">2</option>
-                <option>2</option>
-                <option>2</option>
-                <option>2</option>
-                <option>2</option>
-                <option>2</option>
-                <option>2</option>
+                {{-- <option selected="selected">2</option> --}}
+                @foreach ($diseases as $disease)
+                        <option value="{{$disease->id}}">{{$disease->disease_name}}</option>
+                @endforeach
               </select>
               </div>
             </div>

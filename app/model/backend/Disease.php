@@ -10,4 +10,5 @@ class Disease extends Model
   use SoftDeletes;
 protected $fillable = [
   'disease_name',
+  ];
 }
