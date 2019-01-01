@@ -67,5 +67,17 @@ Route::group(['prefix'=>'buy'],function(){
     Route::get('/order', 'backend\BuyController@buy_order')->name('buy_order');
 });
 
+//recycle route
+Route::group(['prefix'=>'recycle'],function(){
+    Route::get('/medicine', 'backend\RecycleBinController@recycle_bin_medicine')->name('recycle_bin_medicine');
+    Route::get('/medicine/restore/{medicine_id}', 'backend\RecycleBinController@recycle_bin_medicine_restore');
+
+    Route::get('/company', 'backend\RecycleBinController@recycle_bin_company')->name('recycle_bin_company');
+    Route::get('/company/restore/{medicine_id}', 'backend\RecycleBinController@recycle_bin_company_restore');
+
+    Route::get('/disease', 'backend\RecycleBinController@recycle_bin_disease')->name('recycle_bin_disease');
+    Route::get('/disease/restore/{disease_id}', 'backend\RecycleBinController@recycle_bin_disease_restore');
+
+});
 
 });
