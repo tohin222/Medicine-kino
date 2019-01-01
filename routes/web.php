@@ -58,6 +58,13 @@ Route::group(['prefix'=>'disease'],function(){
     Route::get('/edit/{disease_id}', 'backend\DiseaseController@disease_edit');
     Route::post('/update', 'backend\DiseaseController@disease_update')->name('disease_update');
 });
+//buy route
+Route::group(['prefix'=>'buy'],function(){
+    Route::get('/sells', 'backend\BuyController@buy_sells')->name('buy_sells');
+    Route::get('/addmedicine/{medicine_id}/{quantity}', 'backend\BuyController@medicine_add_cart');
+    Route::get('/cart', 'backend\BuyController@cart')->name('cart');
+    Route::post('/order_all', 'backend\BuyController@order_all')->name('order_all');
+});
 
 
 });

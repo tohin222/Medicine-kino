@@ -11,4 +11,5 @@ class Disease extends Model
 protected $fillable = [
   'disease_name',
   ];
+  protected $dates = ['deleted_at'];
 }
