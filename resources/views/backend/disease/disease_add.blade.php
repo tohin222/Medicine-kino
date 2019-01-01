@@ -20,7 +20,12 @@
             <div class="form-group row">
               <label class="col-md-3 col-form-label">Medicine Name</label>
               <div class="col-md-9">
-                <input type="text" class="form-control" placeholder="Typing Company Name..."  name="disease_name">
+                <input type="text" class="form-control{{ $errors->has('disease_name') ? ' is-invalid' : '' }}" placeholder="Typing Disease Name..."  name="disease_name">
+                @if ($errors->has('disease_name'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('disease_name') }}</strong>
+                    </span>
+                @endif
               </div>
             </div>
             <button type="submit" class="btn btn-primary mt-1 mb-0">Submit</button>

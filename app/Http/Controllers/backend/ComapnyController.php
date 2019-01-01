@@ -15,6 +15,9 @@ class ComapnyController extends Controller
   }
   public function company_create(Request $request)
     {
+      $validatedData = $request->validate([
+          'company_name' => 'required|alpha',
+      ]);
       Company::insert([
         'company_name'=> $request->company_name,
           'created_at' => Carbon::now(),

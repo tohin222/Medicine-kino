@@ -20,19 +20,34 @@
             <div class="form-group row">
               <label class="col-md-3 col-form-label">Medicine Name</label>
               <div class="col-md-9">
-                <input type="text" class="form-control" placeholder="Typing Name..." name="medicine_name">
+                <input type="text" class="form-control{{ $errors->has('medicine_name') ? ' is-invalid' : '' }}" placeholder="Typing Name..." name="medicine_name">
+                @if ($errors->has('medicine_name'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('medicine_name') }}</strong>
+                    </span>
+                @endif
               </div>
             </div>
             <div class="form-group row">
               <label class="col-md-3 col-form-label">Medicine Quantity</label>
               <div class="col-md-9">
-                <input type="text" class="form-control" placeholder="Typing Quantity..." name="medicine_quantity">
+                <input type="text" class="form-control{{ $errors->has('medicine_quantity') ? ' is-invalid' : '' }}" placeholder="Typing Quantity..." name="medicine_quantity">
+                @if ($errors->has('medicine_quantity'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('medicine_quantity') }}</strong>
+                    </span>
+                @endif
               </div>
             </div>
             <div class="form-group row">
               <label class="col-md-3 col-form-label">Medicine Price</label>
               <div class="col-md-9">
-                <input type="text" class="form-control" placeholder="Typing Price..." name="medicine_price">
+                <input type="text" class="form-control{{ $errors->has('medicine_price') ? ' is-invalid' : '' }}" placeholder="Typing Price..." name="medicine_price">
+                @if ($errors->has('medicine_price'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('medicine_price') }}</strong>
+                    </span>
+                @endif
               </div>
             </div>
 

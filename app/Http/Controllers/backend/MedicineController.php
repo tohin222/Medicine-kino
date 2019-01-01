@@ -25,6 +25,14 @@ class MedicineController extends Controller
   }
   public function medicine_create(Request $request)
   {
+    $validatedData = $request->validate([
+        'medicine_name' => 'required|alpha',
+        'medicine_quantity' => 'required|numeric',
+        'medicine_price' => 'required|numeric',
+        'company_id' => 'required',
+        'disease_id' => 'required',
+    ]);
+
       if($request->hasFile('medicine_image')){
         $medicine_id =  Medicine::insertGetId([
           'medicine_name'    =>$request->medicine_name,

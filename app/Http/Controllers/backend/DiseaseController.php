@@ -16,6 +16,9 @@ class DiseaseController extends Controller
   }
   public function disease_create(Request $request)
     {
+      $validatedData = $request->validate([
+          'disease_name' => 'required|alpha',
+      ]);
       Disease::insert([
         'disease_name'=> $request->disease_name,
           'created_at' => Carbon::now(),
