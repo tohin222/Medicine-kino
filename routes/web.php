@@ -64,6 +64,7 @@ Route::group(['prefix'=>'buy'],function(){
     Route::get('/addmedicine/{medicine_id}/{quantity}', 'backend\BuyController@medicine_add_cart');
     Route::get('/cart', 'backend\BuyController@cart')->name('cart');
     Route::post('/order_all', 'backend\BuyController@order_all')->name('order_all');
+    Route::get('/order', 'backend\BuyController@buy_order')->name('buy_order');
 });
 
 

@@ -47,9 +47,20 @@ public function cart()
       // $order_yearly = DB::table('orders')
       // ->whereYear('created_at', [Carbon::now()->startOfYear(), Carbon::now()->endOfYear()])
       // ->get();
-
+      $counter = 0;
         $carts = Cart::all();
-        return view('backend.buy.cart',compact('carts'));
+        foreach ($carts as $cart) {
+          $counter ++;
+        }
+        echo $counter;
+        if ($counter>0) {
+          return view('backend.buy.cart',compact('carts'));
+        }
+        else {
+          return back()->with('success', 'No order add');
+        }
+        // dd($carts);
+        //return view('backend.buy.cart',compact('carts'));
     }
     public function order_all(Request $request)
           {
@@ -60,6 +71,11 @@ public function cart()
             Cart::truncate();
               return redirect()->route('buy_sells')->with('success', 'Order Done');
           }
-
+      public function buy_order()
+      {
+          $orders = Order::orderBy('created_at', 'desc')
+                ->get();
+          return view('backend.buy.buy_order',compact('orders'));
+      }
 
 }
