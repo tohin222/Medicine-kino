@@ -24,8 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix'=>'admin'],function(){
 
 
-Route::group(['prefix'=>'map'],function(){
-    Route::get('/show', 'backend\MapController@map')->name('map');
+Route::group(['prefix'=>'dashboard'],function(){
+    Route::get('/dashboard', 'backend\DashboardController@dashboard')->name('dashboard');
 });
 
 //medicine route

@@ -9,6 +9,15 @@ use Carbon\Carbon;
 
 class ComapnyController extends Controller
 {
+  /**
+   * Create a new controller instance.
+   *
+   * @return void
+   */
+  public function __construct()
+  {
+      $this->middleware('auth');
+  }
   public function company_add()
   {
   return view('backend.company.company_add');

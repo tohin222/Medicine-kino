@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Kharna-Admin Dashboard</title>
       @include('backend.partials.css')
-
+			@yield('header_css')
 	</head>
 
 	<body class="app ">

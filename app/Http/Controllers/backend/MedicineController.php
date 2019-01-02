@@ -4,14 +4,23 @@ namespace App\Http\Controllers\backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 use App\model\backend\Medicine;
 use App\model\backend\Company;
 use App\model\backend\Disease;
 use Carbon\Carbon;
 
+
 class MedicineController extends Controller
 {
+  /**
+   * Create a new controller instance.
+   *
+   * @return void
+   */
+  public function __construct()
+  {
+      $this->middleware('auth');
+  }
   public function medicine_add()
   {
     $companies = Company::all();
@@ -26,7 +35,7 @@ class MedicineController extends Controller
   public function medicine_create(Request $request)
   {
     $validatedData = $request->validate([
-        'medicine_name' => 'required|alpha',
+        'medicine_name' => 'required|alpha_dash|unique:medicines',
         'medicine_quantity' => 'required|numeric',
         'medicine_price' => 'required|numeric',
         'company_id' => 'required',

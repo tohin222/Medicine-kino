@@ -14,11 +14,7 @@
     <li class="slide">
       <a class="side-menu__item"  data-toggle="slide" href="#"><i class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Dashboard</span><i class="angle fa fa-angle-right"></i></a>
       <ul class="slide-menu">
-        <li><a class="slide-item"  href="index.html"><span>Sales Dashboard</span></a></li>
-        <li><a class="slide-item" href="index2.html"><span>Finance Dashboard</span></a></li>
-        <li><a class="slide-item" href="index3.html"><span>Marketing Dashboard</span></a></li>
-        <li><a class="slide-item" href="index4.html"><span>Social Dashboard</span></a></li>
-        <li><a class="slide-item" href="index5.html"><span>HR Dashboard</span></a></li>
+        <li><a class="slide-item"  href="{{route('dashboard')}}"><span>Sales Dashboard</span></a></li>
       </ul>
     </li>
     <li class="slide">

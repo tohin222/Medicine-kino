@@ -150,9 +150,18 @@
         <a href="profile.html" class="dropdown-item has-icon">
           <i class="ion ion-gear-a"></i> Settings
         </a>
-        <a href="#" class="dropdown-item has-icon">
+        {{-- <a href="{{ route('logout') }}" class="dropdown-item has-icon">
           <i class="ion-ios-redo"></i> Logout
+        </a> --}}
+        <a class="dropdown-item has-icon" href="{{ route('logout') }}"
+           onclick="event.preventDefault();
+                         document.getElementById('logout-form').submit();">
+            <i class="ion-ios-redo"></i>{{ __('Logout') }}
         </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
       </div>
     </li>
   </ul>
