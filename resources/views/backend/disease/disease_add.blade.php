@@ -18,7 +18,7 @@
           <form class="form-horizontal" action="{{route('disease_create')}}" method="post">
             @csrf
             <div class="form-group row">
-              <label class="col-md-3 col-form-label">Medicine Name</label>
+              <label class="col-md-3 col-form-label">Disease Name</label>
               <div class="col-md-9">
                 <input type="text" class="form-control{{ $errors->has('disease_name') ? ' is-invalid' : '' }}" placeholder="Typing Disease Name..."  name="disease_name">
                 @if ($errors->has('disease_name'))

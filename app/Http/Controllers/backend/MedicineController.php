@@ -79,7 +79,9 @@ class MedicineController extends Controller
   public function medicine_edit(Request $request,$medicine_id)
    {
      $medicine_info = Medicine::findOrFail($medicine_id);
-     return view('backend.medicine.medicine_edit',compact('medicine_info'));
+     $companies = Company::all();
+         $diseases = Disease::all();
+     return view('backend.medicine.medicine_edit',compact('medicine_info','companies','diseases'));
    }
 
     public function medicine_update(Request $request)

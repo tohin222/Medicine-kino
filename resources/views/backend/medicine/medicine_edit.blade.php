@@ -48,29 +48,21 @@
             <div class="form-group overflow-hidden row">
               <label class="col-md-3 col-form-label">Company Name</label>
               <div class="col-md-9">
-              <select class="form-control select2 w-100" name="company_id">
-                <option selected="selected">{{$medicine_info->company_id}}</option>
-                <option>2</option>
-                <option>1</option>
-                <option>1</option>
-                <option>1</option>
-                <option>1</option>
-                <option>1</option>
-              </select>
+                <select class="form-control select2 w-100" name="company_id">
+                  @foreach ($companies as $company)
+                          <option value="{{$company->id}}">{{$company->company_name}}</option>
+                  @endforeach
+                </select>
               </div>
             </div>
             <div class="form-group overflow-hidden row">
               <label class="col-md-3 col-form-label">Disease Name</label>
               <div class="col-md-9">
-              <select class="form-control select2 w-100" name="disease_id">
-                <option selected="selected">{{$medicine_info->disease_id}}</option>
-                <option>2</option>
-                <option>2</option>
-                <option>2</option>
-                <option>2</option>
-                <option>2</option>
-                <option>2</option>
-              </select>
+                <select class="form-control select2 w-100" name="disease_id">
+                  @foreach ($diseases as $disease)
+                          <option value="{{$disease->id}}">{{$disease->disease_name}}</option>
+                  @endforeach
+                </select>
               </div>
             </div>
 

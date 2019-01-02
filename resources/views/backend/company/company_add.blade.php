@@ -18,7 +18,7 @@
           <form class="form-horizontal" action="{{route('company_create')}}" method="post">
             @csrf
             <div class="form-group row">
-              <label class="col-md-3 col-form-label">Medicine Name</label>
+              <label class="col-md-3 col-form-label">Company Name</label>
               <div class="col-md-9">
                 <input type="text" class="form-control{{ $errors->has('company_name') ? ' is-invalid' : '' }}" placeholder="Typing Company Name..."  name="company_name">
                 @if ($errors->has('company_name'))

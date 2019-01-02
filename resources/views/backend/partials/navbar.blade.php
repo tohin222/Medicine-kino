@@ -141,7 +141,7 @@
       <img src="{{asset('backend/assets/img/avatar/avatar-1.jpg')}}" alt="profile-user" class="rounded-circle w-32">
       <div class="d-sm-none d-lg-inline-block">Jessica Lee</div></a>
       <div class="dropdown-menu dropdown-menu-right">
-        <a href="profile.html" class="dropdown-item has-icon">
+        <a href="{{route('profile')}}" class="dropdown-item has-icon">
           <i class="ion ion-android-person"></i> Profile
         </a>
         <a href="profile.html" class="dropdown-item has-icon">

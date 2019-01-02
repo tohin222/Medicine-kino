@@ -51,7 +51,7 @@
                       <td><span class="name">{{$medicine->disease->disease_name}}</span></td>
                       <td class="text-center">
                         <div class="btn-group align-top">
-                        <a class="btn btn-sm btn-primary badge" data-target="#user-form-modal" data-toggle="modal" href="{{url('admin/medicine/edit')}}/{{$medicine->id}}">edit</a><a class="btn btn-sm btn-primary badge" href="{{url('admin/medicine/delete')}}/{{$medicine->id}}"><i class="fa fa-trash"></i></a>
+                        <a class="btn btn-sm btn-primary badge"  href="{{url('admin/medicine/edit')}}/{{$medicine->id}}">edit</a><a class="btn btn-sm btn-primary badge" href="{{url('admin/medicine/delete')}}/{{$medicine->id}}"><i class="fa fa-trash"></i></a>
                         </div>
                       </td>
 										</td>

@@ -79,5 +79,11 @@ Route::group(['prefix'=>'recycle'],function(){
     Route::get('/disease/restore/{disease_id}', 'backend\RecycleBinController@recycle_bin_disease_restore');
 
 });
+Route::group(['prefix'=>'profile'],function(){
+
+    Route::get('/profile', 'backend\ProfileController@profile')->name('profile');
+
+});
+
 
 });
