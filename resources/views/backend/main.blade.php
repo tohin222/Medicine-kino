@@ -12,7 +12,7 @@
 			@yield('header_css')
 	</head>
 
-	<body class="app ">
+	<body class="app " style="background-image:url('{{asset('backend/assets/img/fff.jpg')}}'); background-repeat: no-repeat; background-size: cover; ">
 
 		{{-- <div id="spinner"></div> --}}
 

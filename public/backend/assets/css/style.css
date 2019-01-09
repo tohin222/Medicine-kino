@@ -2,7 +2,7 @@
  * Kharna-Admin
  * Kharna-Admin is a Bootstrap 4 Admin Template
  * @author Spruko Technologies
- * 
+ *
  */
 
 /*------------------------------
@@ -635,19 +635,19 @@ body.sidebar-gone .main-content {
 }
 .socailicons  {
 	color:#fff;
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-.socailicons a { 
-	text-decoration:none; 
+.socailicons a {
+	text-decoration:none;
 }
 .twitter1 {
 	background-color:#0db3f3!important;
 }
- .google-plus1 { 
+ .google-plus1 {
 	background-color:#de5140 !important;
 }
  .facebook-like1 {
-	background-color:#3b5998 !important; 
+	background-color:#3b5998 !important;
 }
 .pinterest1 {
 	background-color:#bd081c !important;
@@ -1382,7 +1382,7 @@ div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:last-chil
 }
 .mail_list .list-group-item:last-child {
 	 border-bottom: 0;
-	
+
 }
 .mail_list .media-heading a{
 	font-size:16px;
@@ -3360,7 +3360,7 @@ tr:first-child>td>.fc-day-grid-event {
 }
 .member:hover .memmbername {
 	bottom: 0
-	
+
 }
 .member img {
 	width: 100%;
@@ -4085,7 +4085,7 @@ tr:first-child>td>.fc-day-grid-event {
 .weather-radius .bg-transparent h3{
 	z-index: 10;
     position: relative;
-	
+
 }
 .widgetb i {
 	font-size: 27px;
@@ -4331,7 +4331,7 @@ tr:first-child>td>.fc-day-grid-event {
     display: inline-block;
     text-align: center;
     border: 3px solid #fff;
-    
+
 }
 
 .adtocart i{
@@ -4681,10 +4681,10 @@ tr:first-child>td>.fc-day-grid-event {
 	font-size: 18px;
 }
 .single-page button:active{
-	box-shadow: none;			
+	box-shadow: none;
 }
 .single-page button:focus{
-	outline: none;			
+	outline: none;
 }
 
 .single-page .wrapper.wrapper2 {
@@ -4718,7 +4718,7 @@ tr:first-child>td>.fc-day-grid-event {
 	width: 100%;
 	transition: all .5s;
 	background: #fff;
-	width: 100%; 
+	width: 100%;
 }
 .single-page .wrapper .card-body{
 	padding: 30px;
@@ -4796,7 +4796,7 @@ tr:first-child>td>.fc-day-grid-event {
 	#navs-pills-dropdown .nav .nav-item {
 		margin-top:2px;
 	}
-	
+
 }
 @media (max-width: 568px){
 	.fc-toolbar .fc-left, .fc-toolbar .fc-right, .fc-icon, .fc-toolbar .fc-center {
@@ -4848,7 +4848,7 @@ tr:first-child>td>.fc-day-grid-event {
 		width: 100%;
 		text-align: center;
 	}
-	
+
 	.splits{
 		width: 50%;
 		background: #fff;
@@ -4857,7 +4857,7 @@ tr:first-child>td>.fc-day-grid-event {
 	.splits button{
 		width: 100%;
 		border-radius: 0;
-		background: #505050; 
+		background: #505050;
 		border: 0;
 		opacity: .7;
 	}
@@ -4950,7 +4950,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
 	.construction h1 {
 		font-size: 42px !important;
 	}
-	
+
 }
 
 /*-- General Css---*/
@@ -4970,7 +4970,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
 .ct-chart-pie{
 	height:292px !important;
 }
-.chartist-tooltip { 
+.chartist-tooltip {
 	position: relative;
 }
 .section-2{
@@ -5035,7 +5035,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
 }
 
 .construction-bg:before{
-	content:'';	
+	content:'';
 	position:absolute;
 	background:linear-gradient(120deg, rgb(0, 0, 0, 0.5), rgb(93, 97, 191, 0.5));
 	width:100%;
@@ -5049,9 +5049,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
 .bg-transaprent .dash2{
 	position:relative;
 }
-	
+
 .bg-transaprent:before{
-	content:'';	
+	content:'';
 	position:absolute;
 	background:rgb(0,0,0,0.75);
 	width:100%;
@@ -5263,7 +5263,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
 		margin-top: 93px;
 		margin-bottom: 93px;
 	}
-	
+
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
 	.navbar .form-inline .search-element {
@@ -5384,7 +5384,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
 		right: 0;
 		left: auto;
 	}
-	
+
 	body.search-show .navbar {
 		z-index: 892;
 	}

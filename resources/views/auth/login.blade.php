@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from spruko.com/demo/kharna/html/Kharna_Admin-light/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 31 Dec 2018 06:39:54 GMT -->
-<head>
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +10,7 @@
 
 	</head>
 
-	<body class="bg-primary">
+	<body style="background-image:url('{{asset('backend/assets/img/medicine_background.jpg')}}'); background-repeat: no-repeat; background-size: cover; ">
 		<div id="app">
 			<section class="section section-2">
                 <div class="container">
@@ -61,8 +59,9 @@
 								</div>
 								<div class="col-lg-6">
 									<div class="log-wrapper text-center">
-										<img src="{{asset('backend/assets/img/brand/logo-white.png')}}" class="mb-2 mt-4 mt-lg-0 " alt="logo">
-										<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure</p>
+										<h2 style="color:#fff">Medicine Kino</h2>
+										<p style="color:#fff">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure</p>
+
 
 									</div>
 								</div>

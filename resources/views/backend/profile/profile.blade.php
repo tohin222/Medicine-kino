@@ -84,8 +84,8 @@
 										</div>
 										<div class="card-body">
 											<p><b>User ID :</b> Jessica Lee123</p>
-											<p><b>Name :</b> Jessica Lee</p>
-											<p><b>Emial :</b> jessicalee@gmail.com</p>
+											<p><b>Name :</b> {{ Auth::user()->name }}</p>
+											<p><b>Emial :</b> {{ Auth::user()->email }}</p>
 											<p><b>Phone :</b> +876 6789 234 </p>
 											<p><b>Address : </b> 900 E. La Sierra St.Valrico, FL 33594 </p>
 											<p class="mb-0"><b>Story : </b> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
@@ -108,7 +108,7 @@
 											</div>
 										</div>
 									</div>
-									
+
 								</div>
 							</div>
 @endsection

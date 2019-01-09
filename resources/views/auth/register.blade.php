@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from spruko.com/demo/kharna/html/Kharna_Admin-light/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 31 Dec 2018 06:39:54 GMT -->
+
 <head>
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Kharna-Admin Dashboard</title>
+		<title>Medicine Kino</title>
 
 		@include('backend.partials.css')
 
 	</head>
 
-	<body class="bg-primary">
+	<body  style="background-image:url('{{asset('backend/assets/img/medicine_background.jpg')}}'); background-repeat: no-repeat; background-size: cover; ">
 		<div id="app">
 			<section class="section section-2">
                 <div class="container">
@@ -23,7 +23,7 @@
 									<div class="wrapper wrapper2">
 										<form id="login" class="card-body" tabindex="500" method="POST" action="{{ route('register') }}">
 											@csrf
-											<h3>Login</h3>
+											<h3>Register</h3>
 											<div class="mail">
 												<input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 												@if ($errors->has('name'))
@@ -87,8 +87,8 @@
 								</div>
 								<div class="col-lg-4">
 									<div class="log-wrapper text-center">
-										<img src="{{asset('backend/assets/img/brand/logo-white.png')}}" class="mb-2 mt-4 mt-lg-0 " alt="logo">
-										<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure</p>
+										<h2 style="color:#fff">Medicine Kino</h2>
+										<p style="color:#fff">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure</p>
 
 									</div>
 								</div>

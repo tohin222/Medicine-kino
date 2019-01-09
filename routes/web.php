@@ -79,9 +79,16 @@ Route::group(['prefix'=>'recycle'],function(){
     Route::get('/disease/restore/{disease_id}', 'backend\RecycleBinController@recycle_bin_disease_restore');
 
 });
+
 Route::group(['prefix'=>'profile'],function(){
 
     Route::get('/profile', 'backend\ProfileController@profile')->name('profile');
+
+});
+Route::group(['prefix'=>'stock'],function(){
+
+    Route::get('/out', 'backend\StockOutController@stock_out')->name('stock_out');
+    Route::get('/add_new_medicine/{medicine_id}/{quantity}', 'backend\StockOutController@new_medicine_add');
 
 });
 
