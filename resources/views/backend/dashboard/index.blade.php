@@ -16,13 +16,21 @@
 		<div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-12">
 			<div class="card">
 				<div class="card-body text-center">
-					<h5>Today Visitors</h5>
+					<h5>Today Sales</h5>
+					@php
+					$day = 0;
+					@endphp
+					@foreach($order_daily as $order_daily)
+						@php
+						$day = $day+$order_daily->order_total;
+						@endphp
+					@endforeach
 
 					<div class="text-center">
 						<div class="mb-3 mt-1">
 							<span class="sparkline_line" ></span>
 						</div>
-						<h3 class="mb-2 text-dark">$837</h3>
+						<h3 class="mb-2 text-dark">{{ $day}}Taka</h3>
 						<span class="text-green"><i class="fa fa-arrow-up text-success"> </i>23% increase</span></i><small> last week</small>
 					</div>
 				</div>
@@ -47,13 +55,22 @@
 		<div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-12">
 			<div class="card">
 				<div class="card-body text-center">
-					<h5>Today Earnings</h5>
+					<h5>Mothly Sales</h5>
+					@php
+                          $month = 0;
+                          @endphp
+                          @foreach($order_monthly as $order_monthly)
+
+                            @php
+                            $month = $month+$order_monthly->order_total;
+                            @endphp
+                          @endforeach
 
 					<div class="text-center">
 						<div class="mb-3 mt-1">
 							<span class="sparkline_bar" ></span>
 						</div>
-						<h3 class="mb-2 text-dark">$587</h3>
+						<h3 class="mb-2 text-dark">{{ $month}}Taka</h3>
 						<span class="text-green"><i class="fa fa-arrow-up text-success"> </i>23% increase</span></i><small> last week</small>
 					</div>
 				</div>
@@ -62,13 +79,22 @@
 		<div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-12">
 			<div class="card">
 				<div class="card-body text-center">
-					<h5>Total Expense</h5>
+					<h5>Yearly Sales</h5>
+					@php
+                            $year = 0;
+                            @endphp
+                            @foreach($order_yearly as $order_yearly)
+
+                            @php
+                            $year = $year+$order_yearly->order_total;
+                            @endphp
+                          @endforeach
 
 					<div class="text-center">
 						<div class="mb-3 mt-1">
 							<span class="sparkline_area" ></span>
 						</div>
-						<h3 class="mb-2 text-dark">$359</h3>
+						<h3 class="mb-2 text-dark">{{ $year }}Taka</h3>
 						<span class=""><i class="fa fa-arrow-down text-danger"> </i>3% decrease</span></i><small> last week</small>
 					</div>
 				</div>
@@ -76,28 +102,7 @@
 		</div>
 	</div>
 
-	<div class="row ">
-		<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
-			<div class="card">
-				<div class="card-header">
-					<h4>Monthly Sales</h4>
-				</div>
-				<div class="card-body text-center">
-					<div id="bar-chart" class="overflow-hidden" > </div>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
-			<div class="card">
-				<div class="card-header">
-					<h4>Yearly Template Sales</h4>
-				</div>
-				<div class="card-body text-center">
-					<div id="sales-chart" class="overflow-hidden"> </div>
-				</div>
-			</div>
-		</div>
-	</div>
+
 
 	<div class="row">
 		<div class="col-lg-12 col-xl-8 col-md-12 col-12 col-sm-12">
@@ -221,98 +226,6 @@
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="col-12 col-sm-12">
-			<div class="card">
-				<div class="card-header">
-					<h4>Account Retention</h4>
-				</div>
-				<div class="card-body text-center">
-					<div  id="Area-chart"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-lg-12 col-xl-8 col-md-12 col-12 col-sm-12">
-			<div class="card">
-				<div class="pt-0 pb-0 pl-3 pr-3 card-body">
-					<div class="row">
-						<div class="col-xs-12 col-lg-5 cover-image weather-radius text-center position-relative transparent" data-image-src="assets/img/weather.jpg">
-							<div class="weather-shade">
-								<i class="wi wi-day-sleet text-white"></i>
-							</div>
-							<div class="card-body mt-5 pt-5">
-								<i class="vl_weather-day-rain text-light  mt-5 pt-5 d-block"></i>
-							</div>
-							<div class="bg-transparent border-0 text-light  pt-4">
-								<h3 class="weight300">Sunny Day</h3>
-							</div>
-						</div>
-						<div class="col-xs-12 col-lg-7 widgetb p-0">
-							<div class="card-body p-4">
-								<h4 class="mb-0">MONDAY <br/>
-									<span class="text-muted h5"> 22  October</span>
-								</h4>
-								<div class="fs-45 text-primary pt-4 ">
-									32<sup>o</sup>
-									<span class="h3 ">Sunny</span>
-								</div>
-							</div>
-							<div class="card-footer bg-white text-center ">
-								<div class="row">
-									<div class="col-sm-2 col-4 mt-2 pb-2">
-										<h6 class="text-muted mb-3">TUE</h6>
-										<i class="fe fe-cloud-rain"></i>
-										<p class="mb-0 text-muted">18<sup>o</sup>c</p>
-									</div>
-									<div class="col-sm-2 col-4 mt-2 pb-2">
-										<h6 class="text-muted mb-3">WED</h6>
-										<i class="fe fe-cloud"></i>
-										<p class="mb-0 text-muted">22<sup>o</sup>c</p>
-									</div>
-									<div class="col-sm-2 col-4 mt-2 pb-2">
-										<h6 class="text-muted mb-3">THU</h6>
-										<i class="fe fe-cloud-snow"></i>
-										<p class="mb-0 text-muted">15<sup>o</sup>c</p>
-									</div>
-									<div class="col-sm-2 col-4 mt-2 pb-2">
-										<h6 class="text-muted mb-3">FRI</h6>
-										<i class="fe fe-cloud-rain"></i>
-										<p class="mb-0 text-muted">19<sup>o</sup>c</p>
-									</div>
-									<div class="col-sm-2 col-4 mt-2 pb-2">
-										<h6 class="text-muted mb-3">SAT</h6>
-										<i class="fe fe-cloud"></i>
-										<p class="mb-0 text-muted">29<sup>o</sup>c</p>
-									</div>
-									<div class="col-sm-2 col-4 mt-2 pb-2">
-										<h6 class="text-muted mb-3">SUN</h6>
-										<i class="fe fe-cloud-snow"></i>
-										<p class="mb-0 text-muted">17<sup>o</sup>c</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-lg-12 col-xl-4 col-md-12 col-12 col-sm-12">
-			<div class="card bg-primary">
-				<div class="card-body text-center">
-					<div class="content-box b-right">
-						<h5 class="mb-4">Visitors this Year</h5>
-						<span class="sparkline16 mt-2"><canvas width="120" height="120" style="display: inline-block; width: 120px; height: 120px; vertical-align: top;"></canvas></span>
-						<h4 class="mt-3">8,97,654</h4>
-						<a href="#" class="btn btn-success btn-round btn-sm m-t-20">view more 70%</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 @endsection
 
 @section('footer_scripts')

@@ -18,7 +18,9 @@
               <tr>
                 <th class="wd-5p">Serial</th>
                 <th class="wd-10p">Disease Name</th>
+                  @if (auth::user()->role==1)
                 <th class="wd-10p">Action</th>
+              @endif
               </tr>
             </thead>
             <tbody>
@@ -30,9 +32,11 @@
                       <td class="serial">{{$serail}}.</td>
 
                       <td><span class="name">{{$disease->disease_name}}</span></td>
+                        @if (auth::user()->role==1)
                       <td>
                         <a href="{{url('admin/disease/edit')}}/{{$disease->id}}">edit</a>| <a href="{{url('admin/disease/delete')}}/{{$disease->id}}">delete</a>
                       </td>
+                    @endif
                     </tr>
                     @php
                       $serail++;

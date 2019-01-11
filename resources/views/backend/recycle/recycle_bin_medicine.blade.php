@@ -18,9 +18,9 @@
               <tr>
                 <th class="wd-5p">Serial</th>
                 <th class="wd-10p">Medicine Name</th>
-                <th class="wd-10p">Company Name</th>
-                <th class="wd-15p">Disease Name</th>
+                @if (auth::user()->role==1)
                 <th class="wd-10p">Action</th>
+              @endif
                 <th class="wd-15p">Delete Time</th>
                 <th class="wd-15p">Delete Date</th>
               </tr>
@@ -33,11 +33,11 @@
                     <tr>
                       <td class="serial">{{$serail}}.</td>
                       <td>  <span class="name">{{$delete_medicine->medicine_name}}</span> </td>
-                      <td><span class="name">{{$delete_medicine->companies->company_name}}</span></td>
-                      <td><span class="name">{{$delete_medicine->disease->disease_name}}</span></td>
+                      @if (auth::user()->role==1)
                       <td>
                          <a href="{{url('admin/recycle/medicine/restore')}}/{{$delete_medicine->id}}">Restore</a>
                       </td>
+                    @endif
                       <td>  <span class="name">{{$delete_medicine->deleted_at->diffForHumans()}}</span> </td>
                       <td>  <span class="name">{{$delete_medicine->deleted_at->format('d-m-Y')}}</span> </td>
                     </tr>

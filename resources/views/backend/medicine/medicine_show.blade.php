@@ -28,7 +28,9 @@
                 <th class="wd-5p">Medicine Price</th>
                 <th class="wd-10p">Company Name</th>
                 <th class="wd-15p">Disease Name</th>
+                @if (auth::user()->role==1)
                 <th class="wd-10p">Action</th>
+              @endif
               </tr>
             </thead>
             <tbody>
@@ -47,13 +49,15 @@
                       <td>  <span class="name">{{$medicine->medicine_name}}</span> </td>
                       <td>  <span class="name">{{$medicine->medicine_quantity}}</span> </td>
                       <td>  <span class="name">{{$medicine->medicine_price}}</span> </td>
-                      <td><span class="name">{{$medicine->companies->company_name}}</span></td>
+                      <td><span class="name">{{$medicine->company->company_name}}</span></td>
                       <td><span class="name">{{$medicine->disease->disease_name}}</span></td>
+                      @if (auth::user()->role==1)
                       <td class="text-center">
                         <div class="btn-group align-top">
                         <a class="btn btn-sm btn-primary badge"  href="{{url('admin/medicine/edit')}}/{{$medicine->id}}">edit</a><a class="btn btn-sm btn-primary badge" href="{{url('admin/medicine/delete')}}/{{$medicine->id}}"><i class="fa fa-trash"></i></a>
                         </div>
                       </td>
+                    @endif
 										</td>
                     </tr>
                     @php

@@ -1,13 +1,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from spruko.com/demo/kharna/html/Kharna_Admin-light/datatables.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 31 Dec 2018 06:37:03 GMT -->
 <head>
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Kharna-Admin Dashboard</title>
+		<title>Ousod Kino</title>
       @include('backend.partials.css')
 			@yield('header_css')
 	</head>

@@ -506,6 +506,8 @@ body.sidebar-gone .main-content {
 }
 .main-navbar .header-brand .header-brand-img {
 	margin-right: 0;
+	width: 170px;
+	height: 60px;
 }
 .app-header1 .header-brand {
 	color: inherit;

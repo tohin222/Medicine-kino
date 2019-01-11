@@ -18,7 +18,11 @@
               <tr>
                 <th class="wd-5p">Serial</th>
                 <th class="wd-10p">Company Name</th>
+                @if (auth::user()->role==1)
                 <th class="wd-10p">Action</th>
+                @endif
+                <th class="wd-15p">Delete Time</th>
+                <th class="wd-15p">Delete Date</th>
               </tr>
             </thead>
             <tbody>
@@ -30,9 +34,13 @@
                       <td class="serial">{{$serail}}.</td>
 
                       <td><span class="name">{{$delete_company->company_name}}</span></td>
+                      @if (auth::user()->role==1)
                       <td>
                         <a href="{{url('admin/recycle/company/restore')}}/{{$delete_company->id}}">Restore</a>
                       </td>
+                    @endif
+                      <td>  <span class="name">{{$delete_company->deleted_at->diffForHumans()}}</span> </td>
+                      <td>  <span class="name">{{$delete_company->deleted_at->format('d-m-Y')}}</span> </td>
                     </tr>
                     @php
                       $serail++;

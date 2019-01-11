@@ -12,12 +12,11 @@ class Medicine extends Model
     'medicine_name', 'medicine_description', 'company_id','disease_id','medicine_image','medicine_quantity','created_at',
   ];
 
-
-  public function companies(){
-      return $this->hasOne("App\model\backend\Company","id","company_id");
-    }
   public function disease(){
       return $this->hasOne("App\model\backend\Disease","id","disease_id");
+    }
+  public function company(){
+      return $this->hasOne("App\model\backend\Company","id","company_id");
     }
 
 

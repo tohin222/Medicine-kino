@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg main-navbar">
   <a class="header-brand" href="index.html">
-    <img src="{{asset('backend/assets/img/brand/logo.png')}}" class="header-brand-img" alt="Kharna-Admin  logo" width="300px">
+    <img src="{{asset('backend/assets/img/brand/logo.png')}}" class="header-brand-img" alt="medicine-kino  logo">
   </a>
   <form class="form-inline mr-auto">
     <ul class="navbar-nav mr-3">
